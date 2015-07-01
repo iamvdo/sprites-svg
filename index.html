@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sprites SVG</title>
+  <style>
+html {
+  padding: 4em;
+  font: 1em sans-serif;
+}
+.case {
+  padding: 0 2em;
+}
+.case span {
+  vertical-align: middle;
+}
+.sep {
+  display: inline-block;
+  padding-left: 4em;
+  padding-right: 1em;
+}
+h3 {
+  font: italic normal 1em sans-serif;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+}
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-clock {
+  background: url(svg1.svg#icon-clock-view) no-repeat;
+}
+
+.icon-heart {
+  background: url(svg1.svg#icon-heart-view) no-repeat;
+}
+
+.icon-arrow-right {
+  background: url(svg1.svg#icon-arrow-right-view) no-repeat;
+}
+
+.icon-clock--sized {
+  background: url(svg1--sized.svg#icon-clock-view) no-repeat;
+}
+
+.icon-heart--sized {
+  background: url(svg1--sized.svg#icon-heart-view) no-repeat;
+}
+
+.icon-arrow-right--sized {
+  background: url(svg1--sized.svg#icon-arrow-right-view) no-repeat;
+}
+
+.icon-clock-2 {
+  background: url("svg2.svg#svgView(viewBox(0,0,32,32))") no-repeat;
+}
+
+.icon-heart-2 {
+  background: url("svg2.svg#svgView(viewBox(0,32,32,32))") no-repeat;
+}
+
+.icon-arrow-right-2 {
+  background: url("svg2.svg#svgView(viewBox(0,64,32,32))") no-repeat;
+}
+
+.icon-clock-2--sized {
+  background: url("svg2--sized.svg#svgView(viewBox(0,0,32,32))") no-repeat;
+}
+
+.icon-heart-2--sized {
+  background: url("svg2--sized.svg#svgView(viewBox(0,32,32,32))") no-repeat;
+}
+
+.icon-arrow-right-2--sized {
+  background: url("svg2--sized.svg#svgView(viewBox(0,64,32,32))") no-repeat;
+}
+
+.icon-clock-3 {
+  background: url("svg2.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 0;
+}
+
+.icon-heart-3 {
+  background: url("svg2.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 -32px;
+}
+
+.icon-arrow-right-3 {
+  background: url("svg2.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 -64px;
+}
+.icon-clock-3--sized {
+  background: url("svg2--sized.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 0;
+}
+
+.icon-heart-3--sized {
+  background: url("svg2--sized.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 -32px;
+}
+
+.icon-arrow-right-3--sized {
+  background: url("svg2--sized.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 -64px;
+}
+
+.icon-clock-target {
+  background: url("svg3.svg#icon-clock") no-repeat;
+}
+
+.icon-heart-target {
+  background: url("svg3.svg#icon-heart") no-repeat;
+}
+
+.icon-arrow-right-target {
+  background: url("svg3.svg#icon-arrow-right") no-repeat;
+}
+
+.icon-clock-target--sized {
+  background: url("svg3--sized.svg#icon-clock") no-repeat;
+}
+
+.icon-heart-target--sized {
+  background: url("svg3--sized.svg#icon-heart") no-repeat;
+}
+
+.icon-arrow-right-target--sized {
+  background: url("svg3--sized.svg#icon-arrow-right") no-repeat;
+}
+
+.icon--demo {
+  background: url("svg-demo.svg") no-repeat;
+  background-size: 32px 192px;
+  background-position: 0 0;
+}
+.icon--demo:hover,
+.icon--demo:focus {
+  background-position: 0 -32px;
+}
+.icon-heart-demo {
+  background-position: 0 -64px;
+}
+.icon-heart-demo:hover,
+.icon-heart-demo:focus {
+  background-position: 0 -96px;
+}
+.icon-arrow-right-demo {
+  background-position: 0 -128px;
+}
+.icon-arrow-right-demo:hover,
+.icon-arrow-right-demo:focus {
+  background-position: 0 -160px;
+}
+
+.icon-clock-demo2 {
+  /* cyan */
+  -webkit-filter: hue-rotate(180deg) saturate(2) brightness(5);
+          filter: hue-rotate(180deg) saturate(2) brightness(5);
+}
+.icon-heart-demo2 {
+  /* magenta */
+  -webkit-filter: hue-rotate(300deg) saturate(2) brightness(5);
+          filter: hue-rotate(300deg) saturate(2) brightness(5);
+}
+.icon-arrow-right-demo2 {
+  /* yellow */
+  -webkit-filter: hue-rotate(60deg) saturate(2) brightness(5);
+          filter: hue-rotate(60deg) saturate(2) brightness(5);
+}
+.icon--demo2:hover,
+.icon--demo2:focus {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.icon--demo3 {
+  background: none;
+  -webkit-mask: url("svg-demo.svg") no-repeat;
+  -webkit-mask-size: 32px 192px;
+  -webkit-mask-position: 0 0;
+  mask: url("svg-demo.svg") no-repeat;
+  mask-size: 32px 192px;
+  mask-position: 0 0;
+}
+.icon-clock-demo3 {
+  background: cyan;
+}
+.icon-heart-demo3 {
+  background: magenta;
+  -webkit-mask-position: 0 -64px;
+  mask-position: 0 -64px;
+}
+.icon-arrow-right-demo3 {
+  background: yellow;
+  -webkit-mask-position: 0 -128px;
+  mask-position: 0 -128px;
+}
+.icon--demo3:hover,
+.icon--demo3:focus {
+  background: green;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<h1>SVG Sprites with <code>&lt;img></code> and <code>background-image</code></h1>
+<p>Based from <a href="https://css-tricks.com/svg-fragment-identifiers-work/">a CSS Tricks article</a></p>
+
+
+<h2><code>&lt;img> tag</code></h2>
+
+<div class="case">
+  <h3>with #fragment referencing <code>&lt;view></code></h3>
+  <img src="svg1.svg#icon-clock-view" alt="" />
+  <img src="svg1.svg#icon-heart-view" alt="" />
+  <img src="svg1.svg#icon-arrow-right-view" alt="" />
+</div>
+
+<div class="case">
+  <h3>with <code>#svgView(viewBox())</code></h3>
+  <img src="svg2.svg#svgView(viewBox(0,0,32,32))" alt="" />
+  <img src="svg2.svg#svgView(viewBox(0,32,32,32))" alt="" />
+  <img src="svg2.svg#svgView(viewBox(0,64,32,32))" alt="" />
+</div>
+
+<div class="case">
+  <h3>with #fragment and hide/show embedded <code>:target</code> CSS</h3>
+  <img src="svg3.svg#icon-clock" alt="" />
+  <img src="svg3.svg#icon-heart" alt="" />
+  <img src="svg3.svg#icon-arrow-right" alt="" />
+</div>
+
+
+<h2><code>background-image</code></h2>
+
+<div class="case">
+  <h3>with #fragment referencing <code>&lt;view></code></h3>
+  <span class="icon icon-clock"></span>
+  <span class="icon icon-heart"></span>
+  <span class="icon icon-arrow-right"></span>
+  <span class="sep">SVG sized:</span>
+  <span class="icon icon-clock--sized"></span>
+  <span class="icon icon-heart--sized"></span>
+  <span class="icon icon-arrow-right--sized"></span>
+</div>
+
+<div class="case">
+  <h3>with <code>#svgView(viewBox())</code></h3>
+  <span class="icon icon-clock-2"></span>
+  <span class="icon icon-heart-2"></span>
+  <span class="icon icon-arrow-right-2"></span>
+  <span class="sep">SVG sized:</span>
+  <span class="icon icon-clock-2--sized"></span>
+  <span class="icon icon-heart-2--sized"></span>
+  <span class="icon icon-arrow-right-2--sized"></span>
+</div>
+
+<div class="case">
+  <h3>with <code>background-position</code></h3>
+  <span class="icon icon-clock-3"></span>
+  <span class="icon icon-heart-3"></span>
+  <span class="icon icon-arrow-right-3"></span>
+  <span class="sep">SVG sized:</span>
+  <span class="icon icon-clock-3--sized"></span>
+  <span class="icon icon-heart-3--sized"></span>
+  <span class="icon icon-arrow-right-3--sized"></span>
+</div>
+
+<div class="case">
+  <h3>with #fragment and hide/show embedded <code>:target</code> CSS</h3>
+  <span class="icon icon-clock-target"></span>
+  <span class="icon icon-heart-target"></span>
+  <span class="icon icon-arrow-right-target"></span>
+  <span class="sep">SVG sized:</span>
+  <span class="icon icon-clock-target--sized"></span>
+  <span class="icon icon-heart-target--sized"></span>
+  <span class="icon icon-arrow-right-target--sized"></span>
+</div>
+
+
+<h2>Demo</h2>
+<p>Based on the best technique: <code>background-position</code> and sized SVG</p>
+<div class="case">
+  <h3>Colors defined inside SVG (hover or focus)</h3>
+  <a href="#" class="icon icon--demo icon-clock-demo"></a>
+  <a href="#" class="icon icon--demo icon-heart-demo"></a>
+  <a href="#" class="icon icon--demo icon-arrow-right-demo"></a>
+</div>
+
+<div class="case">
+  <h3>Colors defined outside SVG with CSS filters</h3>
+  <a href="#" class="icon icon--demo icon--demo2 icon-clock-demo icon-clock-demo2"></a>
+  <a href="#" class="icon icon--demo icon--demo2 icon-heart-demo icon-heart-demo2"></a>
+  <a href="#" class="icon icon--demo icon--demo2 icon-arrow-right-demo icon-arrow-right-demo2"></a>
+</div>
+
+<div class="case">
+  <h3>Colors defined outside SVG with CSS masks</h3>
+  <a href="#" class="icon icon--demo icon--demo3 icon-clock-demo icon-clock-demo3"></a>
+  <a href="#" class="icon icon--demo icon--demo3 icon-heart-demo icon-heart-demo3"></a>
+  <a href="#" class="icon icon--demo icon--demo3 icon-arrow-right-demo icon-arrow-right-demo3"></a>
+</div>
+
+</body>
+</html>
