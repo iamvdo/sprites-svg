@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chrome bug</title>
+  <style>
+html {
+  padding: 4em;
+  font: 1em sans-serif;
+}
+.case {
+  padding: 0 2em;
+}
+.case span,
+.case img {
+  vertical-align: middle;
+}
+.sep {
+  display: inline-block;
+  padding-left: 4em;
+  padding-right: 1em;
+}
+h3 {
+  font: italic normal 1em sans-serif;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+}
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("svg1.svg") no-repeat;
+  background-size: 32px 96px;
+  background-position: 0 0;
+}
+.icon-heart {
+  background-position: 0 -32px;
+}
+.icon-arrow-right {
+  background-position: 0 -64px;
+}
+
+  </style>
+</head>
+<body>
+
+<h1>Chrome bug</h1>
+<ul>
+<li>Referencing a SVG using <code>&lt;img></code> and the <code>&lt;view></code> element work</li>
+<li>Referencing a SVG using <code>background-image</code> and <code>background-position</code> work</li>
+</ul>
+<p><strong>Bug: </strong>In the same page, first referencing a SVG using <code>&lt;img></code> and <code>&lt;view></code> breaks <code>background-image/-position</code> technique. Test by commenting the HTML by yourself.</p>
+
+<div class="case">
+  <h3>with #fragment referencing <code>&lt;view></code> (should show a clock)</h3>
+  <!-- Comment next line -->
+  <img src="svg1.svg#icon-clock-view" alt="" />
+</div>
+<div class="case">
+  <h3>with <code>background-position</code>  (should show a clock, a heart and an arrow)</h3>
+  <a href="#" class="icon icon-clock"></a>
+  <a href="#" class="icon icon-heart"></a>
+  <a href="#" class="icon icon-arrow-right"></a>
+</div>
+
+</body>
+</html>
