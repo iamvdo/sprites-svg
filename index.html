@@ -47,15 +47,15 @@ img {
 }
 
 .icon-clock--sized {
-  background: url(svg1--sized.svg#icon-clock-view) no-repeat;
+  background: url(svg1--sized.svg#icon-clock-view-bg) no-repeat;
 }
 
 .icon-heart--sized {
-  background: url(svg1--sized.svg#icon-heart-view) no-repeat;
+  background: url(svg1--sized.svg#icon-heart-view-bg) no-repeat;
 }
 
 .icon-arrow-right--sized {
-  background: url(svg1--sized.svg#icon-arrow-right-view) no-repeat;
+  background: url(svg1--sized.svg#icon-arrow-right-view-bg) no-repeat;
 }
 
 .icon-clock-2 {
@@ -70,16 +70,17 @@ img {
   background: url("svg2.svg#svgView(viewBox(0,64,32,32))") no-repeat;
 }
 
+/* viewBoxes have to be y-shifted from 32px. Why? */
 .icon-clock-2--sized {
-  background: url("svg2--sized.svg#svgView(viewBox(0,0,32,32))") no-repeat;
-}
-
-.icon-heart-2--sized {
   background: url("svg2--sized.svg#svgView(viewBox(0,32,32,32))") no-repeat;
 }
 
-.icon-arrow-right-2--sized {
+.icon-heart-2--sized {
   background: url("svg2--sized.svg#svgView(viewBox(0,64,32,32))") no-repeat;
+}
+
+.icon-arrow-right-2--sized {
+  background: url("svg2--sized.svg#svgView(viewBox(0,96,32,32))") no-repeat;
 }
 
 .icon-clock-3 {

@@ -4,6 +4,11 @@
 <view id="icon-heart-view" viewBox="0 32 32 32" />
 <view id="icon-arrow-right-view" viewBox="0 64 32 32" />
 
+<!-- viewBoxes have to be y-shifted from 32px when referenced via background-image. Why? -->
+<view id="icon-clock-view-bg" viewBox="0 32 32 32" />
+<view id="icon-heart-view-bg" viewBox="0 64 32 32" />
+<view id="icon-arrow-right-view-bg" viewBox="0 96 32 32" />
+
 <g id="icon-clock">
   <path d="M20.6,23.3L14,16.7V7.9h4v7.2l5.4,5.4L20.6,23.3z M16-0.1c-8.8,0-16,7.2-16,16s7.2,16,16,16s16-7.2,16-16S24.8-0.1,16-0.1zM16,27.9c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S22.6,27.9,16,27.9z"/>
 </g>
